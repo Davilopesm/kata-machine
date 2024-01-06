@@ -18,8 +18,7 @@ export default class SinglyLinkedList<T> {
     const newNode: Node<T> = { value: item };
 
     if (!this.head) {
-      this.head = newNode;
-      this.tail = newNode;
+      this.head = this.tail = newNode;
       this.length++;
       return;
     }
@@ -40,8 +39,7 @@ export default class SinglyLinkedList<T> {
     const newNode = { value: item };
 
     if (!this.head) {
-      this.head = newNode;
-      this.tail = newNode;
+      this.head = this.tail = newNode;
       this.length++;
       return;
     }
