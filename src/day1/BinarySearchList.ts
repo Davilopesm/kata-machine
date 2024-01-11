@@ -4,10 +4,10 @@ export default function bs_list(haystack: number[], needle: number): boolean {
 
   while (low < high) {
     const midPoint = Math.floor(low + (high - low) / 2);
-    const item = haystack[midPoint];
-    if (item === needle) {
+    const currentPoint = haystack[midPoint];
+    if (currentPoint === needle) {
       return true;
-    } else if (item > needle) {
+    } else if (currentPoint > needle) {
       high = midPoint;
     } else {
       low = midPoint + 1;
